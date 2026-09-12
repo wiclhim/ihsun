@@ -1,0 +1,36 @@
+ihsun repository cleanup v5
+
+Original site count: 336
+Final site count: 309
+
+Removed because config explicitly marked them broken/unfinished:
+- [CF]AV研究所[py]❌
+- ❌whostv[py]
+- 酷爱[py]❌ok不能播[已关必搜索]
+- 🔍py_stgay[py]❌
+- 🔍motv[py]❌
+- 🔍小处女[py]❌没有播放地址
+- 🔍每日大乱斗[py][免翻]❌
+- 🔍818黑料网[py]❌
+- 🔍51黑料网[py]❌
+- 🔍四虎视频[py]❌
+- ❌没有写好，91视频[xbpq]
+- ❌禁漫天堂[xbpq][无图]
+- [待修复]🔞91porna[xbpq]
+- ❌🔞StripChat[直播][XYQHiker]
+- 🔞[待修复]spankbang[XYQHiker]
+- 🔞[待修复]Tktube[XYQHiker]
+- [待修复]🔞强国AV[XYQHiker]❌网站无数据
+- 🔞Soporn[XYQHiker]❌
+- 🔞爱上av[XYQHiker]❌
+- [待修复]🔞吃瓜网[XYQHiker]
+- ❌🔞色猫[采集]
+
+Removed after current external/parser audit:
+- ❌whostv[py] — whos.tv is online, but the bundled parser targets stale DOM selectors and was failing in OK影视.
+- xgroovy[py] and 🔍🔞xgroovy[XYQHiker] — current access is inconsistent/Cloudflare-blocked; treated as unreliable for this repo.
+- 🔍Pornhub.js — old JS parser; duplicate Pornhub implementations remain in the repo.
+- 🔍小处女.js — source domain could not be verified current; removed as unverified/stale.
+- ebay直播[js] — legacy api.maiyoux.com:81 endpoint; no current 2026 verification found.
+- 🔍SOAV[密][js][免翻] — source domain could not be verified current; removed as stale/unverified.
+- 🔍18av[js] was KEPT because current checks still show 18av.mm-cg.com responding with HTTP 200/valid TLS.
