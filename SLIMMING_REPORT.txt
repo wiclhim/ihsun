@@ -12,3 +12,25 @@ Cleaned hard-coded dead stream fallbacks:
 Not removed:
 - Dynamic spiders whose primary site is still reachable or whose code can discover current stream URLs.
 - Sources that web verification could not conclusively classify as dead were retained to avoid false deletions.
+
+
+=== 2026-09-12 tvbox18.json active-reference cleanup ===
+Removed 9 active site entries whose tv/py target file was deleted/missing:
+- 💯stripchat高清弹幕[直播][py]
+  https://fastly.jsdelivr.net/gh/wiclhim/ihsun@main/tv/py/py_stripchat飞鱼高级版备份.py
+- 瑟瑟[直播][py]
+  https://fastly.jsdelivr.net/gh/wiclhim/ihsun@main/tv/py/瑟瑟直播 (1).py
+- 测试[py]
+  https://fastly.jsdelivr.net/gh/wiclhim/ihsun@main/tv/py/测试.py
+- jabie (3)[py]
+  https://fastly.jsdelivr.net/gh/wiclhim/ihsun@main/tv/py/jabie (3).py
+- 🔞Beeg[py][无搜]
+  https://fastly.jsdelivr.net/gh/wiclhim/ihsun@main/tv/py/🔞 Beeg.py
+- 🔍onlyfans gv[py]
+  https://fastly.jsdelivr.net/gh/wiclhim/ihsun@main/tv/py/onlyfans gv.py
+- 🔍JAV36[py]
+  https://fastly.jsdelivr.net/gh/wiclhim/ihsun@main/tv/py/JAV36 (1).py
+- 🔍xiang512[py]
+  https://fastly.jsdelivr.net/gh/wiclhim/ihsun@main/tv/py/xiang512 (1).py
+- 🔍PigAV朱古力[py]
+  https://fastly.jsdelivr.net/gh/wiclhim/ihsun@main/tv/py/PigAV (1).py

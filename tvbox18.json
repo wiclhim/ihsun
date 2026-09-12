@@ -32,20 +32,6 @@
 				"ratio": 1.6
 			}
 		},
-		/*{
-			"key": "avtoday.py",
-			"name": "avtoday[py]",
-			"type": 3,
-			"api": "https://fastly.jsdelivr.net/gh/wiclhim/ihsun@main/tv/py/avtoday.py",
-			"searchable": 1,
-			"quickSearch": 1,
-			"filterable": 0,
-			"changeable": 0,
-			"style": {
-				"type": "rect",
-				"ratio": 1.6
-			}
-		},*/
 		{
 			"key": "csp_LocalFile",
 			"name": "💾本地视频",
@@ -86,19 +72,6 @@
 			}
 		},
 		{
-			"key": "stripchat2-py",
-			"name": "💯stripchat高清弹幕[直播][py]",
-			"type": 3,
-			"api": "https://fastly.jsdelivr.net/gh/wiclhim/ihsun@main/tv/py/py_stripchat飞鱼高级版备份.py",
-			"searchable": 0,
-			"filterable": 0,
-			"changeable": 0,
-			"style": {
-				"type": "rect",
-				"ratio": 1.6
-			}
-		},
-		{
 			"key": "stripchat直播通用弹幕-py",
 			"name": "💯stripchat高清通用弹幕[直播][py]",
 			"type": 3,
@@ -111,33 +84,6 @@
 				"ratio": 1.6
 			}
 		},
-		/*{
-			"key": "stripchat原版弹幕-py",
-			"name": "💯stripchat原版弹幕班[直播][py]",
-			"type": 3,
-			"api": "https://fastly.jsdelivr.net/gh/wiclhim/ihsun@main/tv/py/stripchat直播.py",
-			"searchable": 0,
-			"filterable": 0,
-			"changeable": 0,
-			"style": {
-				"type": "rect",
-				"ratio": 1.6
-			}
-		},*/
-		
-		/*{
-			"key": "stripchat-py",
-			"name": "2️⃣stripchat[直播][py]",
-			"type": 3,
-			"api": "https://fastly.jsdelivr.net/gh/wiclhim/ihsun@main/tv/py/stripchat旧.py",
-			"searchable": 0,
-			"filterable": 0,
-			"changeable": 0,
-			"style": {
-				"type": "rect",
-				"ratio": 1.6
-			}
-		},*/
 		{
 			"key": "Chaturbate.py/嗷",
 			"name": "Chaturbate[直播][py]",
@@ -157,20 +103,6 @@
 			"name": "cam4[直播][py]",
 			"type": 3,
 			"api": "https://fastly.jsdelivr.net/gh/wiclhim/ihsun@main/tv/py/cam4.py",
-			"searchable": 0,
-			"quickSearch": 0,
-			"filterable": 0,
-			"changeable": 0,
-			"style": {
-				"type": "rect",
-				"ratio": 1.6
-			}
-		},
-		{
-			"key": "瑟瑟直播.py/嗷",
-			"name": "瑟瑟[直播][py]",
-			"type": 3,
-			"api": "https://fastly.jsdelivr.net/gh/wiclhim/ihsun@main/tv/py/瑟瑟直播 (1).py",
 			"searchable": 0,
 			"quickSearch": 0,
 			"filterable": 0,
@@ -211,25 +143,6 @@
 				"ratio": 1.65
 			}
 		},
-		/*{
-			"key": "xmzb (2)",
-			"name": "熊猫直播[直播][py]",
-			"type": 3,
-			"api": "https://fastly.jsdelivr.net/gh/wiclhim/ihsun@main/tv/py/熊猫直播[播] (2).py",
-			"searchable": 0,
-			"quickSearch": 0,
-			"filterable": 0,
-			"changeable": 1
-		},
-		{
-			"key": "熊猫",
-			"name": "LIVE(韩)[直播][py]",
-			"type": 3,
-			"api": "https://fastly.jsdelivr.net/gh/wiclhim/ihsun@main/tv/py/熊猫.py",
-			"searchable": 0,
-			"filterable": 0,
-			"changeable": 0
-		},*/
 		{
 			"key": "ppp1-py",
 			"name": "ppp[py]",
@@ -438,7 +351,6 @@
 				"ratio": 1.6
 			}
 		},
-		
 		{
 			"key": "py_Pandalive.py",
 			"name": "Pandalive[直播][py][免翻]",
@@ -465,7 +377,6 @@
 				"ratio": 1.6
 			}
 		},
-		
 		{
 			"key": "美人图.py",
 			"name": "美人图[图][py]",
@@ -504,7 +415,8 @@
 				"type": "rect",
 				"ratio": 1.6
 			}
-		},{
+		},
+		{
 			"key": "激情007",
 			"name": "🔍激情007[py]",
 			"type": 3,
@@ -610,30 +522,6 @@
 				"type": "rect",
 				"ratio": 1.6
 			}
-		},
-		{
-			"key": "测试 (1).py",
-			"name": "测试[py]",
-			"type": 3,
-			"api": "https://fastly.jsdelivr.net/gh/wiclhim/ihsun@main/tv/py/测试.py",
-			"searchable": 1,
-			"quickSearch": 1,
-			"filterable": 0,
-			"changeable": 0,
-			"style": {
-				"type": "rect",
-				"ratio": 1.6
-			}
-		},
-		{
-			"key": "jabie (3).py",
-			"name": "jabie (3)[py]",
-			"type": 3,
-			"api": "https://fastly.jsdelivr.net/gh/wiclhim/ihsun@main/tv/py/jabie (3).py",
-			"searchable": 1,
-			"quickSearch": 1,
-			"filterable": 0,
-			"changeable": 0
 		},
 		{
 			"key": "啪啪视频.py",
@@ -782,20 +670,6 @@
 			"api": "https://fastly.jsdelivr.net/gh/wiclhim/ihsun@main/tv/py/fullhd.py",
 			"searchable": 1,
 			"quickSearch": 1,
-			"filterable": 0,
-			"changeable": 0,
-			"style": {
-				"type": "rect",
-				"ratio": 1.6
-			}
-		},
-		{
-			"key": "🔞 Beeg.py",
-			"name": "🔞Beeg[py][无搜]",
-			"type": 3,
-			"api": "https://fastly.jsdelivr.net/gh/wiclhim/ihsun@main/tv/py/🔞 Beeg.py",
-			"searchable": 0,
-			"quickSearch": 0,
 			"filterable": 0,
 			"changeable": 0,
 			"style": {
@@ -1039,20 +913,6 @@
 			}
 		},
 		{
-			"key": "onlyfans gv.py/嗷",
-			"name": "🔍onlyfans gv[py]",
-			"type": 3,
-			"api": "https://fastly.jsdelivr.net/gh/wiclhim/ihsun@main/tv/py/onlyfans gv.py",
-			"searchable": 1,
-			"quickSearch": 1,
-			"filterable": 0,
-			"changeable": 0,
-			"style": {
-				"type": "rect",
-				"ratio": 1.6
-			}
-		},
-		{
 			"key": "py_stgay.py/嗷",
 			"name": "🔍py_stgay[py]❌",
 			"type": 3,
@@ -1119,34 +979,6 @@
 				"ratio": 1.6
 			}
 		},
-		/*{
-			"key": "🚗18AV.py/",
-			"name": "🚗18AV[py]",
-			"type": 3,
-			"api": "https://fastly.jsdelivr.net/gh/wiclhim/ihsun@main/tv/py/18av.py",
-			"searchable": 1,
-			"quickSearch": 1,
-			"filterable": 0,
-			"changeable": 0,
-			"style": {
-				"type": "rect",
-				"ratio": 1.6
-			}
-		},
-		{
-			"key": "🖤黑料718.py/",
-			"name": "🖤黑料718[py]",
-			"type": 3,
-			"api": "https://fastly.jsdelivr.net/gh/wiclhim/ihsun@main/tv/py/hl718.py",
-			"searchable": 1,
-			"quickSearch": 1,
-			"filterable": 0,
-			"changeable": 0,
-			"style": {
-				"type": "rect",
-				"ratio": 1.6
-			}
-		},*/
 		{
 			"key": "黑料网heiliao.py/",
 			"name": "🖤黑料网[py]",
@@ -1487,7 +1319,6 @@
 			},
 			"changeable": 1
 		},
-		
 		{
 			"key": "泥视频py",
 			"name": "[正剧]泥视频[py]",
@@ -1512,37 +1343,6 @@
 				"type": "rect",
 				"ratio": 1.33
 			},
-			"changeable": 1
-		},
-		{
-			"key": "JAV36 (1)",
-			"name": "🔍JAV36[py]",
-			"type": 3,
-			"api": "https://fastly.jsdelivr.net/gh/wiclhim/ihsun@main/tv/py/JAV36 (1).py",
-			"searchable": 1,
-			"quickSearch": 1,
-			"filterable": 0,
-			"changeable": 1
-		},
-		
-		{
-			"key": "xiang512 (1)",
-			"name": "🔍xiang512[py]",
-			"type": 3,
-			"api": "https://fastly.jsdelivr.net/gh/wiclhim/ihsun@main/tv/py/xiang512 (1).py",
-			"searchable": 1,
-			"quickSearch": 1,
-			"filterable": 0,
-			"changeable": 1
-		},
-		{
-			"key": "PigAV (1)",
-			"name": "🔍PigAV朱古力[py]",
-			"type": 3,
-			"api": "https://fastly.jsdelivr.net/gh/wiclhim/ihsun@main/tv/py/PigAV (1).py",
-			"searchable": 1,
-			"quickSearch": 1,
-			"filterable": 0,
 			"changeable": 1
 		},
 		{
@@ -1895,7 +1695,6 @@
 				"ratio": 1.65
 			}
 		},
-		
 		{
 			"key": "csp_xbpq_pornhub11",
 			"name": "🔍💯pornhub[xbpq]",
@@ -2261,7 +2060,6 @@
 			"ext": "YoutubeSpider",
 			"filterable": 0
 		},
-		
 		{
 			"key": "csp_xbpq_91porna",
 			"name": "[待修复]🔞91porna[xbpq]",
@@ -2276,7 +2074,6 @@
 				"ratio": 1.8
 			}
 		},
-		
 		{
 			"key": "csp_XYQHiker_stripchat直播",
 			"name": "❌🔞StripChat[直播][XYQHiker]",
@@ -2514,20 +2311,6 @@
 				"ratio": 1.6
 			}
 		},
-		/*{
-			"key": "csp_XYQHiker_麻豆传媒",
-			"name": "🔞麻豆传媒[XYQHiker]❌永久关停",
-			"type": 3,
-			"api": "csp_XYQHiker",
-			"searchable": 1,
-			"quickSearch": 1,
-			"filterable": 0,
-			"ext": "https://fastly.jsdelivr.net/gh/wiclhim/ihsun@main/tv/XYQHiker/麻豆传媒.json",
-			"style": {
-				"type": "rect",
-				"ratio": 1.6
-			}
-		},*/
 		{
 			"key": "csp_XYQHiker_强国av",
 			"name": "[待修复]🔞强国AV[XYQHiker]❌网站无数据",
@@ -2542,20 +2325,6 @@
 				"ratio": 1.6
 			}
 		},
-		/*{
-			"key": "csp_XYQHiker_台湾kiss",
-			"name": "🔞台湾kiss[XYQHiker]",
-			"type": 3,
-			"api": "csp_XYQHiker",
-			"searchable": 1,
-			"quickSearch": 1,
-			"filterable": 0,
-			"ext": "https://fastly.jsdelivr.net/gh/wiclhim/ihsun@main/tv/XYQHiker/台湾kiss.json",
-			"style": {
-				"type": "rect",
-				"ratio": 1.6
-			}
-		},*/
 		{
 			"key": "csp_XYQHiker_airav",
 			"name": "[带修复]🔞AirAV[XYQHiker]",
@@ -2626,7 +2395,6 @@
 				"ratio": 1.6
 			}
 		},
-		
 		{
 			"key": "csp_XYQHiker_鉴黄师",
 			"name": "🔞鉴黄师[XYQHiker]",
@@ -4088,8 +3856,6 @@
 				}
 			}
 		},
-		
-		
 		{
 			"key": "netflav(gm)",
 			"name": "🔍NETFLAV[gm]",
@@ -4753,7 +4519,8 @@
 			"type": 1,
 			"api": "https://doudouzy.com/api.php/provide/vod/?ac=list",
 			"searchable": 1,
-			"quickSearch": 1,"changeable": 0,
+			"quickSearch": 1,
+			"changeable": 0,
 			"style": {
 				"type": "rect",
 				"ratio": 1.6
@@ -4773,7 +4540,8 @@
 			"type": 1,
 			"api": "https://www.heiliaozyapi.com/api.php/provide/vod/?ac=list",
 			"searchable": 1,
-			"quickSearch": 1,"changeable": 0,
+			"quickSearch": 1,
+			"changeable": 0,
 			"style": {
 				"type": "rect",
 				"ratio": 1.6
