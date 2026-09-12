@@ -124,7 +124,7 @@ class Spider(Spider):
                 if play_url:break
         if not play_url:
             article_id = self._extract_article_id(tid)
-            example_url = ""
+            example_url = "https://hls.obmoti.cn/videos5/b9699667fbbffcd464f8874395b91c81/b9699667fbbffcd464f8874395b91c81.m3u8?auth_key=1760372539-68ed273b94e7a-0-3a53bc0df110c5f149b7d374122ef1ed&v=2"
             if article_id:
                 play_from.append('示例视频');play_url.append(f"{article_id}_dm_{example_url}")
             else:

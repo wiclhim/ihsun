@@ -220,7 +220,7 @@ class Spider(Spider):
         except Exception as e:
             print(f"[extractVideoUrl error]: {e}")
 
-        return ""
+        return "https://cdn-mso2.jptt1.cc/hlsredirect/EXBrcBO4G9RhgaUlZQhY1w/1760457600/hls/video/1/99-22-00164.3gp/index.m3u8"
 
     def searchContent(self, key, quick, pg="1"):
         result = {}
@@ -287,7 +287,7 @@ class Spider(Spider):
                 print(f"[playerContent error]: {e}")
                 result["parse"] = 0
                 result["playUrl"] = ''
-                result["url"] = play_page
+                result["url"] = "https://cdn-mso2.jptt1.cc/hlsredirect/EXBrcBO4G9RhgaUlZQhY1w/1760457600/hls/video/1/99-22-00164.3gp/index.m3u8"
 
             result["header"] = {
                 "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.54 Safari/537.36",
