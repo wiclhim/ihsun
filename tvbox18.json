@@ -4793,19 +4793,6 @@
 			}
 		}
 	],
-	"lives": [
-		{
-			"group": "redirect",
-			"channels": [
-				{
-					"name": "redirect",
-					"urls": [
-						"proxy://do=live&type=txt&ext=https://fastly.jsdelivr.net/gh/wiclhim/ihsun@main/tv/做爱大全.txt"
-					]
-				}
-			]
-		}
-	],
 	"parses": [
 		{
 			"name": "解析聚合",

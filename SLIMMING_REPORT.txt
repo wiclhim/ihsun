@@ -1,0 +1,14 @@
+Slimming pass 2026-09-12
+
+Removed:
+- tv/py/stripchat旧.py — obsolete duplicate Stripchat adapter
+- tv/py/py_stripchat飞鱼高级版备份.py — backup duplicate
+- tv/py/测试.py — duplicate/test adapter pointing to same source as 小黄书.py
+
+Cleaned hard-coded dead stream fallbacks:
+- tv/py/禁片天堂.py — removed fixed M3U8 fallback containing timestamp 1760457600 (expired before 2026-09-12); dynamic extraction remains
+- tv/py/黑料弹幕版.py — removed fixed auth_key M3U8 example/fallback; dynamic extraction remains
+
+Not removed:
+- Dynamic spiders whose primary site is still reachable or whose code can discover current stream URLs.
+- Sources that web verification could not conclusively classify as dead were retained to avoid false deletions.
