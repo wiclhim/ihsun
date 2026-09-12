@@ -186,20 +186,6 @@
       }
     },
     {
-      "key": "sae8视频-py",
-      "name": "sae8视频[py]",
-      "type": 3,
-      "api": "https://fastly.jsdelivr.net/gh/wiclhim/ihsun@main/tv/py/src_040.py",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 0,
-      "changeable": 0,
-      "style": {
-        "type": "rect",
-        "ratio": 1.6
-      }
-    },
-    {
       "key": "麻豆社-py",
       "name": "麻豆社[py]",
       "type": 3,
@@ -276,20 +262,6 @@
       "name": "油管YouTuBe[py]",
       "type": 3,
       "api": "https://fastly.jsdelivr.net/gh/wiclhim/ihsun@main/tv/py/0712youtube.py",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 0,
-      "changeable": 0,
-      "style": {
-        "type": "rect",
-        "ratio": 1.6
-      }
-    },
-    {
-      "key": "黄豆短剧.py",
-      "name": "黄豆短剧[py]",
-      "type": 3,
-      "api": "https://fastly.jsdelivr.net/gh/wiclhim/ihsun@main/tv/py/src_038.py",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 0,
@@ -394,19 +366,6 @@
       }
     },
     {
-      "key": "ai顶级涩[图].py",
-      "name": "ai顶级涩[图][py]",
-      "type": 3,
-      "api": "https://fastly.jsdelivr.net/gh/wiclhim/ihsun@main/tv/py/src_065.py",
-      "searchable": 0,
-      "filterable": 0,
-      "changeable": 0,
-      "style": {
-        "type": "rect",
-        "ratio": 1.6
-      }
-    },
-    {
       "key": "激情007",
       "name": "🔍激情007[py]",
       "type": 3,
@@ -499,16 +458,6 @@
       }
     },
     {
-      "key": "啪啪视频.py",
-      "name": "🔍啪啪视频[py][免翻]",
-      "type": 3,
-      "api": "https://fastly.jsdelivr.net/gh/wiclhim/ihsun@main/tv/py/src_003.py",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 0,
-      "changeable": 0
-    },
-    {
       "key": "JAV目录.py",
       "name": "🔍JAV目录[py]",
       "type": 3,
@@ -577,20 +526,6 @@
       "name": "91porn[py][免翻]",
       "type": 3,
       "api": "https://fastly.jsdelivr.net/gh/wiclhim/ihsun@main/tv/py/91porn.py",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 0,
-      "changeable": 0,
-      "style": {
-        "type": "rect",
-        "ratio": 1.6
-      }
-    },
-    {
-      "key": "神秘影院",
-      "name": "🔍神秘影院[py][免翻]",
-      "type": 3,
-      "api": "https://fastly.jsdelivr.net/gh/wiclhim/ihsun@main/tv/py/src_010.py",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 0,
@@ -981,32 +916,6 @@
       "changeable": 1
     },
     {
-      "key": "甜蜜桃源.py",
-      "name": "🔍甜蜜桃源[py]",
-      "type": 3,
-      "api": "https://fastly.jsdelivr.net/gh/wiclhim/ihsun@main/tv/py/src_049.py",
-      "searchable": 1,
-      "quickSearch": 1,
-      "style": {
-        "type": "rect",
-        "ratio": 1.33
-      },
-      "changeable": 1
-    },
-    {
-      "key": "怦然心动.py",
-      "name": "🔍怦然心动[py]",
-      "type": 3,
-      "api": "https://fastly.jsdelivr.net/gh/wiclhim/ihsun@main/tv/py/src_051.py",
-      "searchable": 1,
-      "quickSearch": 1,
-      "style": {
-        "type": "rect",
-        "ratio": 1.33
-      },
-      "changeable": 1
-    },
-    {
       "key": "91网爆黑料",
       "name": "🔍91网爆黑料[py]",
       "type": 3,
@@ -1124,19 +1033,6 @@
       "changeable": 1
     },
     {
-      "key": "随机小姐姐",
-      "name": "随机小姐姐[秀][py]",
-      "type": 3,
-      "api": "https://fastly.jsdelivr.net/gh/wiclhim/ihsun@main/tv/py/src_036.py",
-      "searchable": 0,
-      "quickSearch": 0,
-      "style": {
-        "type": "rect",
-        "ratio": 1.33
-      },
-      "changeable": 1
-    },
-    {
       "key": "uaa有声",
       "name": "🔍uaa有声[py]",
       "type": 3,
@@ -1176,20 +1072,6 @@
       "changeable": 1
     },
     {
-      "key": "妲己.py",
-      "name": "妲己[免翻][py][不支持VPN]",
-      "type": 3,
-      "api": "https://fastly.jsdelivr.net/gh/wiclhim/ihsun@main/tv/py/src_026.py",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 0,
-      "changeable": 0,
-      "style": {
-        "type": "rect",
-        "ratio": 1.6
-      }
-    },
-    {
       "key": "VHUB.py",
       "name": "🔍VHUB[py][免翻]",
       "type": 3,
@@ -1222,20 +1104,6 @@
       "name": "🔍熊猫视频[py]",
       "type": 3,
       "api": "https://fastly.jsdelivr.net/gh/wiclhim/ihsun@main/tv/py/src_059.py",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 0,
-      "changeable": 0,
-      "style": {
-        "type": "rect",
-        "ratio": 1.6
-      }
-    },
-    {
-      "key": "麻豆免费.py",
-      "name": "🔲麻豆免费在线播放[py]",
-      "type": 3,
-      "api": "https://fastly.jsdelivr.net/gh/wiclhim/ihsun@main/tv/py/src_060.py",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 0,

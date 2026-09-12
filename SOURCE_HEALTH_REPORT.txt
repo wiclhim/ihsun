@@ -34,3 +34,18 @@ Removed after current external/parser audit:
 - ebay直播[js] — legacy api.maiyoux.com:81 endpoint; no current 2026 verification found.
 - 🔍SOAV[密][js][免翻] — source domain could not be verified current; removed as stale/unverified.
 - 🔍18av[js] was KEPT because current checks still show 18av.mm-cg.com responding with HTTP 200/valid TLS.
+
+
+=== 2026-09-12 second external audit (v6) ===
+Removed 10 Python sources whose primary host could not be verified as current and/or was clearly stale/unrelated to the adapter purpose:
+- src_026.py — Hard-coded 3642.7rnr.com endpoint; no current web evidence found.
+- src_038.py — Hard-coded xqjzvcvt.top; no current web evidence found.
+- src_060.py — c-you.hair could not be verified as a current source.
+- src_049.py — tmcrownxlift.site could not be verified as a current source.
+- src_003.py — PaPa video: hard-coded host 202601.duduo.vip / legacy 744tv host; no current web evidence found.
+- src_051.py — prshinezenx.blog could not be independently verified as a current source.
+- src_036.py — Old xjj2.716888.xyz adapter with obsolete Chrome 50 UA/cookie; no current evidence found.
+- src_010.py — Hard-coded multi-host stack h4ivs.sm431.vip / 38.je:38 / 3334.nl:33; no current web evidence found.
+- src_065.py — aidjst.cc/888 could not be verified as a current source.
+- src_040.py — yogamen.net is associated with an old YOMEN mobile-game site, not the intended current video source.
+Kept 18av.js: current 18av.mm-cg.com is active; kept ss直播.js: api.hclyz.com remains referenced by current 2026 TVBox projects.

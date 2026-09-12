@@ -38,3 +38,7 @@ Removed 9 active site entries whose tv/py target file was deleted/missing:
 
 [2026-09-12 additional fix]
 OK影視對非 ASCII Python 檔名可能無法載入；已將 tv/py 下被 tvbox18.json 引用的非 ASCII .py 檔名改為 ASCII src_XXX.py，並同步更新 tvbox18.json。JSON 中顯示名稱未改。
+
+
+=== v6 external audit ===
+Removed 10 stale/unverified Python adapters: src_003.py, src_010.py, src_026.py, src_036.py, src_038.py, src_040.py, src_049.py, src_051.py, src_060.py, src_065.py.
