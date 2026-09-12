@@ -34,3 +34,7 @@ Removed 9 active site entries whose tv/py target file was deleted/missing:
   https://fastly.jsdelivr.net/gh/wiclhim/ihsun@main/tv/py/xiang512 (1).py
 - 🔍PigAV朱古力[py]
   https://fastly.jsdelivr.net/gh/wiclhim/ihsun@main/tv/py/PigAV (1).py
+
+
+[2026-09-12 additional fix]
+OK影視對非 ASCII Python 檔名可能無法載入；已將 tv/py 下被 tvbox18.json 引用的非 ASCII .py 檔名改為 ASCII src_XXX.py，並同步更新 tvbox18.json。JSON 中顯示名稱未改。
