@@ -5,6 +5,18 @@
 	"warningText": "禁止任何商业用途，仅限个人学习爬虫原理使用。",
 	"sites": [
 		{
+			"key": "huangguoai-single-py",
+			"name": "黃果短劇（單片）[py]",
+			"type": 3,
+			"api": "https://fastly.jsdelivr.net/gh/wiclhim/ihsun@main/tv/py/huangguoai.py",
+			"searchable": 0,
+			"quickSearch": 0,
+			"filterable": 0,
+			"changeable": 0,
+			"ext": "{\"video_ids\":[\"15372\"]}",
+			"style": {"type": "rect", "ratio": 0.67}
+		},
+		{
 			"key": "资源管理.py",
 			"name": "资源管理[py]",
 			"type": 3,
