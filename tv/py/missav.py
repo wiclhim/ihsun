@@ -121,6 +121,23 @@ class Spider(BaseSpider):
                 errors.append(host + ": HTTP " + str(response.status_code) + (" Cloudflare" if "Just a moment" in response.text else ""))
             except requests.RequestException as exc:
                 errors.append(host + ": " + type(exc).__name__)
+        # Jina Reader can return the public HTML when Cloudflare challenges
+        # the app's Python client. No account cookies or credentials are sent.
+        try:
+            reader = self.session.get(
+                "https://r.jina.ai/https://missav.live" + path,
+                params=params,
+                headers={"X-Return-Format": "html"},
+                timeout=25,
+            )
+            reader.encoding = "utf-8"
+            if reader.status_code == 200 and "thumbnail" in reader.text:
+                self.host = "https://missav.live"
+                self.last_error = ""
+                return reader.text
+            errors.append("網頁讀取服務: HTTP " + str(reader.status_code))
+        except requests.RequestException as exc:
+            errors.append("網頁讀取服務: " + type(exc).__name__)
         self.last_error = "；".join(errors) or "未取得頁面"
         return ""
 
