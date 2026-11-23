@@ -6,7 +6,7 @@
 	"sites": [
 		{
 			"key": "huangguoai-single-py",
-			"name": "黃果短劇（單片）[py]",
+			"name": "huangguoai 黃果短劇（單片）[py]",
 			"type": 3,
 			"api": "https://fastly.jsdelivr.net/gh/wiclhim/ihsun@main/tv/py/huangguoai.py",
 			"searchable": 0,

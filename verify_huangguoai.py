@@ -22,6 +22,8 @@ with open("tvbox18.json", encoding="utf-8") as handle:
 entry = next(site for site in config["sites"] if site["key"] == "huangguoai-single-py")
 channel = module.Spider()
 channel.init(entry["ext"])
+assert "huangguoai" in entry["name"]
+assert channel.getName() == entry["name"].removesuffix("[py]")
 home = channel.homeContent(False)
 detail = channel.detailContent(["15372"])["list"][0]
 play_id = detail["vod_play_url"].split("$", 1)[1]

@@ -33,7 +33,7 @@ class Spider(BaseSpider):
         self.video_ids = [str(value) for value in ids if re.fullmatch(r"\d+", str(value))]
 
     def getName(self):
-        return "黃果短劇（單片）"
+        return "huangguoai 黃果短劇（單片）"
 
     def homeContent(self, filter):
         return {"class": [{"type_id": "favorites", "type_name": "我的收藏"}],
