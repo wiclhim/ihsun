@@ -803,11 +803,11 @@
 		},
 		{
 			"key": "missav.py",
-			"name": "missav[py][CF][已关必搜索]",
+			"name": "MissAV[py]",
 			"type": 3,
-			"api": "https://fastly.jsdelivr.net/gh/wiclhim/ihsun@main/tv/py/missav.py",
-			"searchable": 0,
-			"quickSearch": 0,
+			"api": "https://fastly.jsdelivr.net/gh/wiclhim/ihsun@8c19d74a828b1d4ed8bb20eee57cbaff5d9b2050/tv/py/missav.py",
+			"searchable": 1,
+			"quickSearch": 1,
 			"filterable": 0,
 			"changeable": 0,
 			"style": {
