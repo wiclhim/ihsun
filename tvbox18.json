@@ -593,7 +593,7 @@
 			"key": "jable.py",
 			"name": "jable[py]",
 			"type": 3,
-			"api": "https://fastly.jsdelivr.net/gh/wiclhim/ihsun@main/tv/py/jable.py",
+			"api": "https://fastly.jsdelivr.net/gh/wiclhim/ihsun@490afbedfb704480a4f49bbc228e3fe0ce5e83c2/tv/py/jable.py",
 			"searchable": 1,
 			"quickSearch": 1,
 			"filterable": 0,
