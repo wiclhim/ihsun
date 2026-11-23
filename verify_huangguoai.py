@@ -10,7 +10,7 @@ import requests
 
 base = types.ModuleType("base")
 spider = types.ModuleType("base.spider")
-spider.Spider = type("Spider", (), {})
+spider.Spider = type("Spider", (), {"getProxyUrl": lambda self: "http://127.0.0.1:9978/proxy?do=py"})
 sys.modules["base"] = base
 sys.modules["base.spider"] = spider
 spec = importlib.util.spec_from_file_location("huangguoai", "tv/py/huangguoai.py")
@@ -27,6 +27,10 @@ assert channel.getName() == entry["name"].removesuffix("[py]")
 home = channel.homeContent(False)
 assert len(home["list"]) == channel.PAGE_SIZE
 assert len(home["class"]) == len(channel.CATEGORIES)
+assert home["list"][0]["vod_pic"].startswith("http://127.0.0.1:9978/proxy?do=py&type=cover&id=")
+cover_result = channel.localProxy({"type": "cover", "id": home["list"][0]["vod_id"]})
+assert cover_result[0] == 200 and cover_result[1].startswith("image/")
+assert cover_result[2].startswith((b"\xff\xd8\xff", b"\x89PNG", b"RIFF", b"GIF"))
 first_page = channel.categoryContent("all", 1, False, {})
 second_page = channel.categoryContent("all", 2, False, {})
 assert first_page["pagecount"] >= 2
@@ -42,6 +46,12 @@ for category in ("ai-duanju", "ai-manju", "original", "original-duanju",
     assert result["list"]
     categories[category] = (len(result["list"]), result["total"])
     category_first[category] = result["list"][0]["vod_id"]
+comic_cover = channel.localProxy({"type": "cover", "id": category_first["ai-manju"]})
+assert comic_cover[0] == 200 and comic_cover[1].startswith("image/")
+fresh_channel = module.Spider()
+fresh_channel.init(entry["ext"])
+fresh_cover = fresh_channel.localProxy({"type": "cover", "id": category_first["ai-manju"]})
+assert fresh_cover[0] == 200 and fresh_cover[1].startswith("image/")
 search = channel.searchContent("神瞳", False, "1")
 assert search["list"] and search["total"] >= len(search["list"])
 search_page_one = channel.searchContent("神", False, "1")
@@ -50,6 +60,8 @@ assert search_page_one["pagecount"] >= 2
 assert set(item["vod_id"] for item in search_page_one["list"]).isdisjoint(
     item["vod_id"] for item in search_page_two["list"])
 detail = channel.detailContent(["15372"])["list"][0]
+detail_cover = channel.localProxy({"type": "cover", "id": detail["vod_id"]})
+assert detail_cover[0] == 200 and detail_cover[1].startswith("image/")
 multi = channel.detailContent(["117"])["list"][0]
 assert len(multi["vod_play_url"].split("#")) == 48
 multi_play = channel.playerContent("", multi["vod_play_url"].split("#")[1].split("$", 1)[1], [])
@@ -78,6 +90,10 @@ for label, uri in (("key", key.group(1) if key else None), ("segment", segment))
 
 print(json.dumps({
     "home_count": len(home["list"]),
+    "cover_status": cover_result[0],
+    "detail_cover_status": detail_cover[0],
+    "comic_cover_status": comic_cover[0],
+    "fresh_instance_cover_status": fresh_cover[0],
     "all_total": first_page["total"],
     "categories": categories,
     "search_count": len(search["list"]),

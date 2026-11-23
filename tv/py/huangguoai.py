@@ -30,6 +30,7 @@ class Spider(BaseSpider):
 
     def __init__(self):
         self.video_ids = []
+        self._cover_urls = {}
         self.session = requests.Session()
         self.session.headers.update({
             "User-Agent": self.UA,
@@ -102,7 +103,7 @@ class Spider(BaseSpider):
         return {"list": [{
             "vod_id": video_id,
             "vod_name": data.get("title") or video_id,
-            "vod_pic": data.get("cover") or "",
+            "vod_pic": self._cover(video_id, data.get("cover")),
             "vod_content": data.get("description") or "",
             "vod_remarks": "更新至%d集" % len(play),
             "vod_play_from": "黃果短劇",
@@ -124,6 +125,33 @@ class Spider(BaseSpider):
             header[str(cdn["authKey"])] = str(cdn["authValue"])
         return {"parse": 0, "playUrl": "", "url": url, "header": header}
 
+    def localProxy(self, param):
+        if param.get("type") != "cover":
+            return [404, "text/plain", b"not found"]
+        try:
+            video_id = self._video_id(param.get("id"))
+            url = self._cover_urls.get(video_id)
+            if not url:
+                url = self._api("GET", "/api/videos/" + video_id).get("cover")
+            for attempt in range(2):
+                if not isinstance(url, str) or not url.startswith("https://"):
+                    raise ValueError("沒有可用的封面網址")
+                response = self.session.get(url, timeout=15)
+                if response.status_code in (401, 403, 404, 410) and attempt == 0:
+                    url = self._api("GET", "/api/videos/" + video_id).get("cover")
+                    self._cover_urls[video_id] = url
+                    continue
+                response.raise_for_status()
+                if not response.content or len(response.content) > 8 * 1024 * 1024:
+                    raise ValueError("封面資料大小異常")
+                mime, image = self._decode_cover(response.content)
+                return [200, mime, image, {"Content-Length": str(len(image))}]
+        except ImportError:
+            return [503, "text/plain", b"AES support unavailable"]
+        except Exception:
+            return [502, "text/plain", b"cover unavailable"]
+        return [502, "text/plain", b"cover unavailable"]
+
     def searchContent(self, key, quick, pg="1"):
         if not str(key).strip():
             return self._page([], max(1, int(pg)), {"pages": 1, "total": 0})
@@ -141,8 +169,49 @@ class Spider(BaseSpider):
         self._video_id(video_id)
         count = data.get("episode_count") or 0
         return {"vod_id": video_id, "vod_name": data.get("title") or video_id,
-                "vod_pic": data.get("cover") or "",
+                "vod_pic": self._cover(video_id, data.get("cover")),
                 "vod_remarks": "更新至%s集" % count}
+
+    def _cover(self, video_id, url):
+        if url:
+            self._cover_urls[video_id] = url
+        return self.getProxyUrl() + "&type=cover&id=" + video_id
+
+    @staticmethod
+    def _decode_cover(content):
+        def image_type(data):
+            if data.startswith(b"\xff\xd8\xff"):
+                return "image/jpeg"
+            if data.startswith(b"\x89PNG\r\n\x1a\n"):
+                return "image/png"
+            if data.startswith((b"GIF87a", b"GIF89a")):
+                return "image/gif"
+            if data.startswith(b"RIFF") and data[8:12] == b"WEBP":
+                return "image/webp"
+            return ""
+
+        plain_type = image_type(content)
+        if plain_type:
+            return plain_type, content
+        key = b"f5d965df75336270"
+        iv = b"97b60394abc2fbe1"
+        padded = content + b"\0" * (-len(content) % 16)
+        try:
+            from Crypto.Cipher import AES
+            decoded = AES.new(key, AES.MODE_CBC, iv).decrypt(padded)
+        except ImportError:
+            try:
+                from Cryptodome.Cipher import AES
+                decoded = AES.new(key, AES.MODE_CBC, iv).decrypt(padded)
+            except ImportError:
+                from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
+                decryptor = Cipher(algorithms.AES(key), modes.CBC(iv)).decryptor()
+                decoded = decryptor.update(padded) + decryptor.finalize()
+        decoded = decoded[:len(content)]
+        mime = image_type(decoded)
+        if not mime:
+            raise ValueError("封面解密後不是可辨識的圖片")
+        return mime, decoded
 
     def _page(self, items, page, pagination):
         return {"page": page,
