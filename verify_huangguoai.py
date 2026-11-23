@@ -27,7 +27,7 @@ assert channel.getName() == entry["name"].removesuffix("[py]")
 home = channel.homeContent(False)
 assert len(home["list"]) == channel.PAGE_SIZE
 assert len(home["class"]) == len(channel.CATEGORIES)
-assert home["list"][0]["vod_pic"].startswith("http://127.0.0.1:9978/proxy?do=py&type=cover&id=")
+assert home["list"][0]["vod_pic"].startswith("http://127.0.0.1:9978/proxy?do=py&siteKey=huangguoai-single-py&type=cover&id=")
 cover_result = channel.localProxy({"type": "cover", "id": home["list"][0]["vod_id"]})
 assert cover_result[0] == 200 and cover_result[1].startswith("image/")
 assert cover_result[2].startswith((b"\xff\xd8\xff", b"\x89PNG", b"RIFF", b"GIF"))

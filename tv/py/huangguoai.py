@@ -13,6 +13,7 @@ from base.spider import Spider as BaseSpider
 
 class Spider(BaseSpider):
     HOST = "https://huangguoai.com"
+    SITE_KEY = "huangguoai-single-py"
     UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
     PAGE_SIZE = 20
     CATEGORIES = (
@@ -175,7 +176,7 @@ class Spider(BaseSpider):
     def _cover(self, video_id, url):
         if url:
             self._cover_urls[video_id] = url
-        return self.getProxyUrl() + "&type=cover&id=" + video_id
+        return self.getProxyUrl() + "&siteKey=" + self.SITE_KEY + "&type=cover&id=" + video_id
 
     @staticmethod
     def _decode_cover(content):
