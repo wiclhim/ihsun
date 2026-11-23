@@ -24,16 +24,6 @@ class Spider(BaseSpider):
         ("monthly-hot", "本月熱門"),
         ("uncensored-leak", "無碼流出"),
         ("fc2", "無碼・FC2"),
-        ("heyzo", "無碼・HEYZO"),
-        ("tokyohot", "無碼・東京熱"),
-        ("1pondo", "無碼・一本道"),
-        ("caribbeancom", "無碼・Caribbeancom"),
-        ("caribbeancompr", "無碼・Caribbeancompr"),
-        ("10musume", "無碼・10musume"),
-        ("pacopacomama", "無碼・pacopacomama"),
-        ("gachinco", "無碼・Gachinco"),
-        ("xxxav", "無碼・XXX-AV"),
-        ("marriedslash", "無碼・人妻斬"),
     )
     HEADERS = {
         "User-Agent": "Mozilla/5.0 (Linux; Android 12) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
