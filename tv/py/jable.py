@@ -91,7 +91,6 @@ class Spider(BaseSpider):
         self._class_cache = [
             {"type_id": "latest-updates", "type_name": "最近更新"},
             {"type_id": "hot", "type_name": "热门影片"},
-            {"type_id": "new-release", "type_name": "全新上市"},
             {"type_id": "categories/chinese-subtitle", "type_name": "中文字幕"},
             {"type_id": "categories/roleplay", "type_name": "角色劇情"},
             {"type_id": "tags/cosplay", "type_name": "角色扮演"},
