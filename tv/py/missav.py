@@ -14,7 +14,7 @@ except ImportError:
 
 
 class Spider(BaseSpider):
-    HOSTS = ("https://missav.ws", "https://missav.live", "https://missav123.com")
+    HOSTS = ("https://missav.live", "https://missav123.com", "https://missav.ws")
     CATEGORIES = (
         ("new", "最近更新"),
         ("release", "新作上市"),
@@ -32,6 +32,7 @@ class Spider(BaseSpider):
     def __init__(self):
         super().__init__()
         self.host = self.HOSTS[0]
+        self.last_error = ""
         self.session = requests.Session()
         self.session.headers.update(self.HEADERS)
 
@@ -42,28 +43,31 @@ class Spider(BaseSpider):
         return "MissAV"
 
     def homeContent(self, filter):
+        items = self._list(self._get("/new"))
         return {"class": [{"type_id": path, "type_name": name} for path, name in self.CATEGORIES],
-                "filters": {}, "list": self._list(self._get("/new")), "parse": 0, "jx": 0}
+                "filters": {}, "list": items or [self._diagnostic()], "parse": 0, "jx": 0}
 
     def homeVideoContent(self):
-        return {"list": self._list(self._get("/new"))}
+        return {"list": self._list(self._get("/new")) or [self._diagnostic()]}
 
     def categoryContent(self, tid, pg, filter, extend):
         page = self._page(pg)
         path = str(tid or "new").strip("/")
         if path not in dict(self.CATEGORIES):
             return self._paged([], page)
-        return self._paged(self._list(self._get("/" + path, {"page": page})), page)
+        return self._paged(self._list(self._get("/" + path, {"page": page})) or [self._diagnostic()], page)
 
     def searchContent(self, key, quick, pg="1"):
         page = self._page(pg)
         if not str(key or "").strip():
             return self._paged([], page)
-        return self._paged(self._list(self._get("/search/" + quote(str(key).strip()), {"page": page})), page)
+        return self._paged(self._list(self._get("/search/" + quote(str(key).strip()), {"page": page})) or [self._diagnostic()], page)
 
     def detailContent(self, ids):
         if not ids:
             return {"list": [], "parse": 0, "jx": 0}
+        if ids[0] == "__missav_error__":
+            return {"list": [{"vod_id": ids[0], "vod_name": "MissAV 連線狀態", "vod_content": self.last_error or "未取得影片清單", "vod_play_from": "", "vod_play_url": ""}], "parse": 0, "jx": 0}
         path = self._path(ids[0])
         html = self._get(path)
         if not html:
@@ -104,6 +108,7 @@ class Spider(BaseSpider):
 
     def _get(self, path, params=None):
         path = self._path(path)
+        errors = []
         hosts = (self.host,) + tuple(host for host in self.HOSTS if host != self.host)
         for host in hosts:
             try:
@@ -111,10 +116,17 @@ class Spider(BaseSpider):
                 response.encoding = "utf-8"
                 if response.status_code == 200 and "Just a moment" not in response.text and "cf-browser-verification" not in response.text and "thumbnail" in response.text:
                     self.host = host
+                    self.last_error = ""
                     return response.text
-            except requests.RequestException:
-                pass
+                errors.append(host + ": HTTP " + str(response.status_code) + (" Cloudflare" if "Just a moment" in response.text else ""))
+            except requests.RequestException as exc:
+                errors.append(host + ": " + type(exc).__name__)
+        self.last_error = "；".join(errors) or "未取得頁面"
         return ""
+
+    def _diagnostic(self):
+        return {"vod_id": "__missav_error__", "vod_name": "MissAV 暫無資料，點此查看原因",
+                "vod_pic": "", "vod_remarks": self.last_error[:120] or "頁面解析失敗"}
 
     @staticmethod
     def _path(value):
@@ -127,7 +139,7 @@ class Spider(BaseSpider):
         soup = BeautifulSoup(html, "html.parser")
         items, seen = [], set()
         for card in soup.select("div.thumbnail.group"):
-            link = card.select_one('a[href]:not([href="#"])')
+            link = next((a for a in card.find_all("a", href=True) if a.get("href") != "#"), None)
             title_link = card.select_one("a.text-secondary[href]")
             if not link or not title_link:
                 continue
