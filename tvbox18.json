@@ -8,7 +8,7 @@
 			"key": "huangguoai-single-py",
 			"name": "huangguoai 黃果短劇[py]",
 			"type": 3,
-			"api": "https://fastly.jsdelivr.net/gh/wiclhim/ihsun@70efbf582ad16ca7c98290704cb7688e45b1e252/tv/py/huangguoai.py",
+			"api": "https://fastly.jsdelivr.net/gh/wiclhim/ihsun@6e2c48b9f4aadf41c9feb855c64be762137bcd3c/tv/py/huangguoai.py",
 			"searchable": 1,
 			"quickSearch": 1,
 			"filterable": 0,
