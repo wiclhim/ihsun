@@ -805,7 +805,7 @@
 			"key": "missav.py",
 			"name": "MissAV[py]",
 			"type": 3,
-			"api": "https://fastly.jsdelivr.net/gh/wiclhim/ihsun@ae1c853159219b8d47d8d95dd3a85fa74af28724/tv/py/missav.py",
+			"api": "https://fastly.jsdelivr.net/gh/wiclhim/ihsun@d38668873764811c97e10fee79f4513b9a274a5e/tv/py/missav.py",
 			"searchable": 1,
 			"quickSearch": 1,
 			"filterable": 0,
